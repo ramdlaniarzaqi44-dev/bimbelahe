@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbel AHE GoldenStudent</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out forwards;
+        }
+
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://i.ibb.co.com/W4G9jKgW/logo.png" alt="Logo Golden Student" class="h-16 w-auto" />
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tentang AHE</a>
+                    <a href="#program" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Program</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#daftar" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transition-transform transform hover:scale-105 inline-block">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 shadow-lg absolute w-full">
+            <a href="#beranda" class="block py-2 text-gray-600 font-medium hover:text-blue-600 mobile-link">Beranda</a>
+            <a href="#tentang" class="block py-2 text-gray-600 font-medium hover:text-blue-600 mobile-link">Tentang AHE</a>
+            <a href="#program" class="block py-2 text-gray-600 font-medium hover:text-blue-600 mobile-link">Program</a>
+            <a href="#daftar" class="block mt-4 text-center bg-orange-500 text-white py-2 rounded-lg font-bold mobile-link">Daftar Sekarang</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative bg-gradient-to-b from-blue-100 to-white pt-20 pb-32 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-block mb-4 px-4 py-1.5 bg-yellow-200 text-yellow-800 rounded-full font-semibold text-sm shadow-sm flex items-center justify-center space-x-2 w-max mx-auto">
+                    <i data-lucide="star" class="w-4 h-4 text-yellow-600 fill-current"></i>
+                    <span>Bimbel Baca Favorit Anak!</span>
+                    <i data-lucide="star" class="w-4 h-4 text-yellow-600 fill-current"></i>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 mb-6 leading-tight">
+                    Belajar Membaca Jadi <span class="text-orange-500">Super Menyenangkan!</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+                    Bimbel AHE GoldenStudent menggunakan metode <em>Fun Learning</em>. Anak TK & SD bisa cepat baca tanpa merasa dipaksa, karena belajar serasa bermain!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#daftar" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                        <span>Daftar Online Sekarang</span>
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#tentang" class="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-100 px-8 py-4 rounded-full font-bold text-lg shadow-sm transition-colors flex items-center justify-center">
+                        Pelajari Metodenya
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements for Hero -->
+        <div class="absolute top-20 left-10 text-yellow-400 opacity-50 animate-bounce hidden md:block">
+            <i data-lucide="star" class="w-12 h-12 fill-current"></i>
+        </div>
+        <div class="absolute bottom-20 right-10 text-green-400 opacity-50 hidden md:block animate-bounce-slow">
+            <i data-lucide="smile" class="w-14 h-14"></i>
+        </div>
+    </section>
+
+    <!-- TENTANG AHE SECTION -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">Kenapa Memilih AHE?</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Metode AHE (Anak Hebat) dirancang khusus agar proses belajar membaca sesuai dengan dunia anak-anak.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-blue-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow border border-blue-100">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-lg">
+                        <i data-lucide="smile" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Fun Learning</h3>
+                    <p class="text-gray-600">
+                        Belajar membaca dengan pendekatan bermain, senam otak, dan alat peraga ceria agar anak tidak cepat bosan.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-yellow-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow border border-yellow-100">
+                    <div class="bg-yellow-400 w-16 h-16 rounded-full flex items-center justify-center text-yellow-900 mx-auto mb-6 shadow-lg">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Kelas Semi-Privat</h3>
+                    <p class="text-gray-600">
+                        1 Guru maksimal membimbing 2-5 anak. Perhatian lebih fokus dan disesuaikan dengan kemampuan masing-masing anak.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-green-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow border border-green-100">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-lg">
+                        <i data-lucide="check-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Langkah Terarah</h3>
+                    <p class="text-gray-600">
+                        Menggunakan modul bertahap (step-by-step) dari pengenalan huruf hingga lancar membaca kalimat utuh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM KAMI SECTION -->
+    <section id="program" class="py-20 bg-orange-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">Program Unggulan Kami</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto">
+                <!-- Program 1 -->
+                <div class="flex-1 bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-transparent hover:border-blue-400 transition-colors">
+                    <div class="bg-blue-500 h-32 flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-16 h-16 text-white opacity-80"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Les Baca AHE</h3>
+                        <p class="text-blue-600 font-semibold mb-4">Anak Hebat Baca</p>
+                        <p class="text-gray-600 mb-6">
+                            Program utama untuk anak TK dan awal SD. Berfokus pada kelancaran membaca dari nol hingga mahir merangkai kata dan kalimat dengan cara yang asyik.
+                        </p>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Bebas mengeja</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Modul berjenjang & terstruktur</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Evaluasi rutin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="flex-1 bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-transparent hover:border-orange-400 transition-colors">
+                    <div class="bg-orange-500 h-32 flex items-center justify-center">
+                        <i data-lucide="calculator" class="w-16 h-16 text-white opacity-80"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Les Hitung AHA</h3>
+                        <p class="text-orange-500 font-semibold mb-4">Anak Hebat Angka</p>
+                        <p class="text-gray-600 mb-6">
+                            Solusi agar anak tidak takut matematika! Mengenalkan konsep dasar berhitung (tambah, kurang) dengan benda konkret dan cara imajinatif.
+                        </p>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Menyenangkan tanpa kalkulator</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Konsep hitung dasar kuat</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Melatih logika anak</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION FORM SECTION -->
+    <section id="daftar" class="py-20 bg-blue-600 relative overflow-hidden">
+        <!-- Dekorasi Latar Belakang -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div class="absolute top-[-10%] left-[-5%] w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+                
+                <!-- Teks Info -->
+                <div class="flex-1 text-white text-center lg:text-left">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Mulai Petualangan Belajar Anak Anda!</h2>
+                    <p class="text-blue-100 text-lg mb-8 leading-relaxed">
+                        Isi formulir di samping untuk mendaftar secara online. Tim kami akan segera menghubungi Anda melalui WhatsApp untuk mengonfirmasi jadwal percobaan (Trial) gratis!
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center lg:justify-start space-x-4">
+                            <div class="bg-blue-500 p-3 rounded-full"><i data-lucide="phone" class="w-6 h-6"></i></div>
+                            <div class="text-left">
+                                <p class="text-sm text-blue-200">Hubungi Kami (WhatsApp)</p>
+                                <p class="font-bold text-xl">0812-3456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <div class="flex-1 w-full max-w-md">
+                    <div class="bg-white rounded-3xl shadow-2xl p-8 relative">
+                        
+                        <!-- Success Overlay (Hidden by default) -->
+                        <div id="success-overlay" class="hidden absolute inset-0 bg-white/95 z-20 rounded-3xl flex-col items-center justify-center p-6 text-center animate-fade-in backdrop-blur-sm">
+                            <div class="bg-green-100 p-4 rounded-full text-green-500 mb-4 animate-bounce">
+                                <i data-lucide="check-circle" class="w-14 h-14"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Pendaftaran Berhasil!</h3>
+                            <p class="text-gray-600 font-medium">
+                                Terima kasih telah mendaftar. Admin kami akan segera menghubungi nomor WhatsApp Anda.
+                            </p>
+                        </div>
+
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-blue-900">Form Pendaftaran</h3>
+                            <p class="text-gray-500 text-sm mt-2">Daftar sekarang untuk kursi terbatas!</p>
+                        </div>
+
+                        <form id="registration-form" class="space-y-5">
+                            <div>
+                                <label for="namaAnak" class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap Anak</label>
+                                <input 
+                                    type="text" 
+                                    id="namaAnak" 
+                                    name="namaAnak" 
+                                    required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                    placeholder="Contoh: Budi Santoso"
+                                />
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="usia" class="block text-sm font-semibold text-gray-700 mb-1">Usia Anak</label>
+                                    <input 
+                                        type="number" 
+                                        id="usia" 
+                                        name="usia" 
+                                        required
+                                        min="3" max="12"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                        placeholder="Thn"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="program-pilihan" class="block text-sm font-semibold text-gray-700 mb-1">Pilihan Program</label>
+                                    <select 
+                                        id="program-pilihan" 
+                                        name="program"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
+                                    >
+                                        <option value="AHE (Les Baca)">Les Baca (AHE)</option>
+                                        <option value="AHA (Les Hitung)">Les Hitung (AHA)</option>
+                                        <option value="Keduanya">Keduanya</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="namaOrtu" class="block text-sm font-semibold text-gray-700 mb-1">Nama Orang Tua/Wali</label>
+                                <input 
+                                    type="text" 
+                                    id="namaOrtu" 
+                                    name="namaOrtu" 
+                                    required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                    placeholder="Nama Ibu/Ayah"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="whatsapp" class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp Aktif</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i data-lucide="message-circle" class="w-4 h-4 text-gray-400"></i>
+                                    </div>
+                                    <input 
+                                        type="tel" 
+                                        id="whatsapp" 
+                                        name="whatsapp" 
+                                        required
+                                        pattern="^[0-9\-\+\s]{9,15}$"
+                                        title="Masukkan nomor telepon yang valid (9-15 digit angka)"
+                                        class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                        placeholder="0812-xxxx-xxxx"
+                                    />
+                                </div>
+                            </div>
+
+                            <button 
+                                type="submit" 
+                                class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 mt-4"
+                            >
+                                Kirim Pendaftaran
+                            </button>
+                        </form>
+                        <p class="text-center text-xs text-gray-400 mt-4">Data Anda aman dan hanya digunakan untuk keperluan pendaftaran.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-950 text-blue-100 py-12 border-t-4 border-yellow-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Brand Info -->
+                <div>
+                    <div class="mb-4 inline-block bg-white p-2 rounded-xl">
+                        <img src="https://i.ibb.co.com/W4G9jKgW/logo.png" alt="Logo Golden Student" class="h-16 w-auto" />
+                    </div>
+                    <p class="text-blue-300 text-sm leading-relaxed mb-4">
+                        Lembaga bimbingan belajar baca dan hitung untuk anak usia dini dengan metode fun learning yang terbukti efektif.
+                    </p>
+                </div>
+
+                <!-- Hubungi Kami -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-sm">Desa Pucuk<br/>Kec. Ndawarlandong<br/>Kabupaten Mojokerto</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2 text-yellow-400 flex-shrink-0"></i>
+                            <span class="text-sm">0812-3456-7890 (Admin AHE)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tautan Cepat -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-yellow-400 transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-yellow-400 transition-colors">Tentang Metode AHE</a></li>
+                        <li><a href="#program" class="hover:text-yellow-400 transition-colors">Program Tersedia</a></li>
+                        <li><a href="#daftar" class="hover:text-yellow-400 transition-colors">Formulir Pendaftaran</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-900 mt-10 pt-6 text-center text-sm text-blue-400">
+                <p>&copy; <span id="current-year"></span> Bimbel AHE GoldenStudent. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // Mengatur tahun dinamis di footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Logika Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tutup menu otomatis jika salah satu link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Logika Formulir & Animasi Sukses
+        const form = document.getElementById('registration-form');
+        const successOverlay = document.getElementById('success-overlay');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah reload halaman
+            
+            // Tampilkan animasi sukses
+            successOverlay.classList.remove('hidden');
+            successOverlay.classList.add('flex');
+            
+            // Bersihkan semua input setelah submit
+            form.reset();
+
+            // Sembunyikan notifikasi sukses otomatis setelah 5 detik
+            setTimeout(() => {
+                successOverlay.classList.add('hidden');
+                successOverlay.classList.remove('flex');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
