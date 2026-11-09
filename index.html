@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimbel AHE Golden Student</title>
+    <title>Bimbel AHE x Golden Student</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,7 +56,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="https://i.ibb.co.com/BHh8RdRF/Logo-Ahe-tanpa-anak-hebat.png" alt="Logo AHE" class="h-16 w-auto" />
+                    <img src="https://i.ibb.co.com/wh1wXrhd/gambar-logo.jpg" alt="Logo AHE" class="h-16 w-auto" />
                 </div>
                 
                 <!-- Desktop Navigation -->
@@ -208,18 +208,18 @@
                 <!-- Program 2 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-transparent hover:border-orange-400 transition-colors flex flex-col">
                     <div class="bg-orange-500 h-32 flex items-center justify-center">
-                        <i data-lucide="calculator" class="w-16 h-16 text-white opacity-80"></i>
+                        <i data-lucide="book-open" class="w-16 h-16 text-white opacity-80"></i>
                     </div>
                     <div class="p-8 flex-1">
-                        <h3 class="text-2xl font-bold text-purple-900 mb-2">Les Hitung AHA</h3>
-                        <p class="text-orange-500 font-semibold mb-4">Anak Hebat Angka</p>
-                        <p class="text-gray-600 mb-6">
-                            Solusi agar anak tidak takut matematika! Mengenalkan konsep dasar berhitung (tambah, kurang, kali, bagi) dengan benda konkret dan cara imajinatif.
-                        </p>
-                        <ul class="space-y-2 mb-6 text-gray-600">
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Menyenangkan tanpa kalkulator</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Konsep hitung dasar kuat</li>
-                            <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Melatih logika anak</li>
+                        <h3 class="text-2xl font-bold text-purple-900 mb-2">Les Mapel Golden Student SD-SMP</h3>
+                        <p class="text-orange-500 font-semibold mb-4">SD & SMP</p>
+                        <ul class="space-y-3 mb-6 text-gray-600 text-sm">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span>Tersedia kelas privat dan semi privat</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span><strong>Privat:</strong> 1 guru - 1 siswa, guru datang ke rumah</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span><strong>Semi privat:</strong> siswa datang ke bimbel. 1 guru max 5 siswa</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span>Metode personal (konsep dasar - pendalaman dalam soal)</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span>Tersedia LKPD penunjang pembelajaran</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i> <span>Terbukti progresif</span></li>
                         </ul>
                     </div>
                 </div>
@@ -297,7 +297,7 @@
                                         id="usia" 
                                         name="usia" 
                                         required
-                                        min="3" max="12"
+                                        min="3" max="15"
                                         class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
                                         placeholder="Thn"
                                     />
@@ -310,40 +310,109 @@
                                         class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all bg-white"
                                     >
                                         <option value="AHE (Les Baca)">AHE (Les Baca)</option>
-                                        <option value="AHA (Les Hitung)">AHA (Les Hitung)</option>
+                                        <option value="Les Mapel Golden Student SD-SMP">Les Mapel Golden Student SD-SMP</option>
                                         <option value="Lebih dari satu">Lebih dari satu</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <div>
-                                <label for="namaOrtu" class="block text-sm font-semibold text-gray-700 mb-1">Nama Orang Tua/Wali</label>
-                                <input 
-                                    type="text" 
-                                    id="namaOrtu" 
-                                    name="namaOrtu" 
-                                    required
-                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
-                                    placeholder="Nama Ibu/Ayah"
-                                />
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="asalSekolah" class="block text-sm font-semibold text-gray-700 mb-1">Asal Sekolah</label>
+                                    <input 
+                                        type="text" 
+                                        id="asalSekolah" 
+                                        name="asalSekolah" 
+                                        required
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                                        placeholder="Contoh: SDN 1 Pucuk"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="kelas" class="block text-sm font-semibold text-gray-700 mb-1">Kelas</label>
+                                    <input 
+                                        type="text" 
+                                        id="kelas" 
+                                        name="kelas" 
+                                        required
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                                        placeholder="Contoh: 3 SD"
+                                    />
+                                </div>
                             </div>
 
-                            <div>
-                                <label for="whatsapp" class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp Aktif</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                        <i data-lucide="message-circle" class="w-4 h-4 text-gray-400"></i>
-                                    </div>
-                                    <input 
-                                        type="tel" 
-                                        id="whatsapp" 
-                                        name="whatsapp" 
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="kotaKab" class="block text-sm font-semibold text-gray-700 mb-1">Kota/Kabupaten</label>
+                                    <select 
+                                        id="kotaKab" 
+                                        name="kotaKab"
                                         required
-                                        pattern="^[0-9\-\+\s]{9,15}$"
-                                        title="Masukkan nomor telepon yang valid (9-15 digit angka)"
-                                        class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
-                                        placeholder="0857-xxxx-xxxx"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all bg-white"
+                                    >
+                                        <option value="">Pilih Kota/Kabupaten</option>
+                                        <option value="Kabupaten Mojokerto">Kabupaten Mojokerto</option>
+                                        <option value="Kota Mojokerto">Kota Mojokerto</option>
+                                        <option value="Kabupaten Jombang">Kabupaten Jombang</option>
+                                        <option value="Kabupaten Gresik">Kabupaten Gresik</option>
+                                        <option value="Kabupaten Lamongan">Kabupaten Lamongan</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="kecamatan" class="block text-sm font-semibold text-gray-700 mb-1">Kecamatan</label>
+                                    <select 
+                                        id="kecamatan" 
+                                        name="kecamatan"
+                                        required
+                                        disabled
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all bg-gray-100 disabled:opacity-50"
+                                    >
+                                        <option value="">Pilih Kecamatan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="alamat" class="block text-sm font-semibold text-gray-700 mb-1">Alamat Lengkap</label>
+                                <textarea 
+                                    id="alamat" 
+                                    name="alamat" 
+                                    rows="2"
+                                    required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                                    placeholder="Nama Jalan, RT/RW, Dusun"
+                                ></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="namaOrtu" class="block text-sm font-semibold text-gray-700 mb-1">Nama Orang Tua/Wali</label>
+                                    <input 
+                                        type="text" 
+                                        id="namaOrtu" 
+                                        name="namaOrtu" 
+                                        required
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                                        placeholder="Nama Ibu/Ayah"
                                     />
+                                </div>
+                                <div>
+                                    <label for="whatsapp" class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp Aktif</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                            <i data-lucide="message-circle" class="w-4 h-4 text-gray-400"></i>
+                                        </div>
+                                        <input 
+                                            type="tel" 
+                                            id="whatsapp" 
+                                            name="whatsapp" 
+                                            required
+                                            pattern="^[0-9\-\+\s]{9,15}$"
+                                            title="Masukkan nomor telepon yang valid (9-15 digit angka)"
+                                            class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all"
+                                            placeholder="0857-xxxx-xxxx"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -370,7 +439,7 @@
                 <!-- Brand Info -->
                 <div>
                     <div class="mb-4 inline-block bg-white p-2 rounded-xl">
-                        <img src="https://i.ibb.co.com/BHh8RdRF/Logo-Ahe-tanpa-anak-hebat.png" alt="Logo AHE" class="h-16 w-auto" />
+                        <img src="https://i.ibb.co.com/wh1wXrhd/gambar-logo.jpg" alt="Logo AHE" class="h-16 w-auto" />
                     </div>
                     <p class="text-purple-300 text-sm leading-relaxed mb-4">
                         Lembaga bimbingan belajar baca dan hitung untuk anak usia dini dengan metode fun learning yang terbukti efektif.
@@ -405,7 +474,7 @@
             </div>
             
             <div class="border-t border-purple-900 mt-10 pt-6 text-center text-sm text-purple-400">
-                <p>&copy; <span id="current-year"></span> Bimbel AHE. Hak Cipta Dilindungi.</p>
+                <p>&copy; <span id="current-year"></span> Bimbel AHE Golden Student. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
@@ -437,6 +506,45 @@
         // Logika Formulir & Animasi Sukses
         const form = document.getElementById('registration-form');
         const successOverlay = document.getElementById('success-overlay');
+        const kotaKabSelect = document.getElementById('kotaKab');
+        const kecamatanSelect = document.getElementById('kecamatan');
+
+        // Data Kecamatan berdasarkan Kota/Kabupaten
+        const dataKecamatan = {
+            "Kabupaten Mojokerto": ["Dawarblandong", "Kemlagi", "Jetis", "Gedeg", "Sooko", "Puri", "Bangsal"],
+            "Kota Mojokerto": ["Magersari", "Prajuritkulon", "Kranggan"],
+            "Kabupaten Jombang": ["Jombang", "Mojoagung", "Ploso", "Ngoro"],
+            "Kabupaten Gresik": ["Gresik", "Kebomas", "Manyar", "Balongpanggang"],
+            "Kabupaten Lamongan": ["Lamongan", "Mantup", "Tikung"]
+        };
+
+        // Event Listener untuk update Kecamatan
+        kotaKabSelect.addEventListener('change', function() {
+            const selectedKota = this.value;
+            
+            // Bersihkan opsi kecamatan saat ini
+            kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+            
+            if (selectedKota && dataKecamatan[selectedKota]) {
+                // Aktifkan dropdown kecamatan
+                kecamatanSelect.disabled = false;
+                kecamatanSelect.classList.remove('bg-gray-100');
+                kecamatanSelect.classList.add('bg-white');
+                
+                // Tambahkan opsi kecamatan
+                dataKecamatan[selectedKota].forEach(function(kec) {
+                    const option = document.createElement('option');
+                    option.value = kec;
+                    option.textContent = kec;
+                    kecamatanSelect.appendChild(option);
+                });
+            } else {
+                // Nonaktifkan jika tidak ada kota yang dipilih
+                kecamatanSelect.disabled = true;
+                kecamatanSelect.classList.add('bg-gray-100');
+                kecamatanSelect.classList.remove('bg-white');
+            }
+        });
 
         form.addEventListener('submit', function(e) {
             e.preventDefault(); // Mencegah reload halaman
@@ -447,6 +555,12 @@
             
             // Bersihkan semua input setelah submit
             form.reset();
+            
+            // Reset dropdown kecamatan ke status awal (disabled)
+            kecamatanSelect.innerHTML = '<option value="">Pilih Kecamatan</option>';
+            kecamatanSelect.disabled = true;
+            kecamatanSelect.classList.add('bg-gray-100');
+            kecamatanSelect.classList.remove('bg-white');
 
             // Sembunyikan notifikasi sukses otomatis setelah 5 detik
             setTimeout(() => {
